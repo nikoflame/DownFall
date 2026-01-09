@@ -1,0 +1,64 @@
+[gd_scene load_steps=15 format=3 uid="uid://ntv80s0tpq75"]
+
+[ext_resource type="Script" uid="uid://ic2rawwv1he4" path="res://00_Globals/AudioManager.gd" id="1_p3iw3"]
+[ext_resource type="AudioStream" uid="uid://cgfih34m4g8qx" path="res://Player/Audio/boing1.wav" id="2_8itgh"]
+[ext_resource type="AudioStream" uid="uid://ccuvwwgcovbcj" path="res://Player/Audio/boing3.wav" id="3_8itgh"]
+[ext_resource type="AudioStream" uid="uid://bw01d6jq6rddc" path="res://Player/Audio/Ding1.wav" id="4_tywlr"]
+[ext_resource type="AudioStream" uid="uid://d1aaohxcwpd7x" path="res://Player/Audio/BoxBreak2.wav" id="5_w7w5q"]
+[ext_resource type="AudioStream" uid="uid://cxmx885jl7fqn" path="res://Player/Audio/BoxBreak.wav" id="6_xb8j6"]
+[ext_resource type="AudioStream" uid="uid://2bipteaxkot7" path="res://Player/Audio/Chime1.wav" id="7_vqge8"]
+[ext_resource type="AudioStream" uid="uid://dyra0m7ymwybh" path="res://Player/Audio/hiss1.ogg" id="8_3cde2"]
+[ext_resource type="AudioStream" uid="uid://bdkslbvm2wkna" path="res://GUI/StartMenu/Audio/CATACLYSMIC EXPLOSION - goluigi.ogg" id="8_qhd2t"]
+[ext_resource type="AudioStream" uid="uid://dahjgx4ckcbde" path="res://GUI/StartMenu/Audio/lightning bug - goluigi.ogg" id="9_05ch4"]
+[ext_resource type="AudioStream" uid="uid://d8i5h6b46l5c" path="res://GUI/StartMenu/Audio/Overture to a Great Day - 4MEN430 and goluigi.ogg" id="10_3cde2"]
+[ext_resource type="AudioStream" uid="uid://bhdfov5tm8uc8" path="res://GUI/StartMenu/Audio/whats the weather today - goluigi.ogg" id="11_bpkx2"]
+[ext_resource type="AudioStream" uid="uid://q0wp38ot7ik6" path="res://GUI/StartMenu/Audio/zila in space - goluigi.ogg" id="12_0l122"]
+[ext_resource type="AudioStream" uid="uid://b68doyqr6a24k" path="res://GUI/StartMenu/Audio/what sound does a jellyfish make - goluigi.ogg" id="13_05ch4"]
+
+[node name="AudioManager" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_p3iw3")
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="." groups=["sounds"]]
+stream = ExtResource("2_8itgh")
+max_polyphony = 5
+
+[node name="jump2" type="AudioStreamPlayer2D" parent="." groups=["sounds"]]
+stream = ExtResource("3_8itgh")
+max_polyphony = 5
+
+[node name="ding" type="AudioStreamPlayer2D" parent="." groups=["sounds"]]
+stream = ExtResource("4_tywlr")
+max_polyphony = 5
+
+[node name="box_break1" type="AudioStreamPlayer2D" parent="." groups=["sounds"]]
+stream = ExtResource("5_w7w5q")
+max_polyphony = 5
+
+[node name="box_break2" type="AudioStreamPlayer2D" parent="." groups=["sounds"]]
+stream = ExtResource("6_xb8j6")
+max_polyphony = 5
+
+[node name="goal" type="AudioStreamPlayer2D" parent="." groups=["sounds"]]
+stream = ExtResource("7_vqge8")
+
+[node name="bomb_timer" type="AudioStreamPlayer2D" parent="." groups=["sounds"]]
+stream = ExtResource("8_3cde2")
+
+[node name="music_start" type="AudioStreamPlayer2D" parent="." groups=["music"]]
+stream = ExtResource("8_qhd2t")
+
+[node name="music_levels_1" type="AudioStreamPlayer2D" parent="." groups=["music"]]
+stream = ExtResource("9_05ch4")
+
+[node name="music_levels_2" type="AudioStreamPlayer2D" parent="." groups=["music"]]
+stream = ExtResource("10_3cde2")
+
+[node name="music_levels_3" type="AudioStreamPlayer2D" parent="." groups=["music"]]
+stream = ExtResource("11_bpkx2")
+
+[node name="music_levels_4" type="AudioStreamPlayer2D" parent="." groups=["music"]]
+stream = ExtResource("12_0l122")
+
+[node name="music_creator" type="AudioStreamPlayer2D" parent="." groups=["music"]]
+stream = ExtResource("13_05ch4")

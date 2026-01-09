@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwelnprp8q1h8"]
+
+[ext_resource type="Script" uid="uid://c73vgjwpku738" path="res://Player/Skills/moon_skill.gd" id="1_3xo5o"]
+[ext_resource type="Texture2D" uid="uid://b0rpfvbxk37cq" path="res://Player/Sprites/Moon.png" id="2_3xo5o"]
+
+[node name="MoonSkill" type="RigidBody2D"]
+z_index = 1
+collision_mask = 137
+script = ExtResource("1_3xo5o")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, -10)
+polygon = PackedVector2Array(0, -10, 7, -10, 7, -6, 4, -4, 4, 4, 7, 6, 7, 10, 0, 10, -7, 3, -7, -3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.5529412, 1, 1)
+position = Vector2(0, -10)
+texture = ExtResource("2_3xo5o")
+
+[node name="Button" type="Button" parent="Sprite2D"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.0
+offset_top = -26.0
+offset_right = -6.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2

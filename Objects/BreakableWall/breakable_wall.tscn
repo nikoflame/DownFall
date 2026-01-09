@@ -1,0 +1,89 @@
+[gd_scene load_steps=10 format=3 uid="uid://dqm8v3qt8ah42"]
+
+[ext_resource type="Texture2D" uid="uid://btu4jnixmy2nx" path="res://Tilemap/Sprites/tilemap.png" id="1_kak5b"]
+[ext_resource type="Script" uid="uid://bt01oef2c6php" path="res://Objects/BreakableWall/breakable_wall.gd" id="1_mlkx1"]
+[ext_resource type="Texture2D" uid="uid://doeu3142hwy5u" path="res://Objects/ControlledByButton/Sprites/rotate_icon.png" id="3_ikmbf"]
+[ext_resource type="Texture2D" uid="uid://0bc0vfemcok0" path="res://Objects/ControlledByButton/Sprites/expand_icon_0.png" id="4_7qbxq"]
+[ext_resource type="Texture2D" uid="uid://c74kax6511oy7" path="res://Objects/ControlledByButton/Sprites/contract_icon_0.png" id="5_ya42v"]
+[ext_resource type="Texture2D" uid="uid://bjofqh0nfdgn0" path="res://Objects/ControlledByButton/Sprites/expand_icon_90.png" id="6_ya42v"]
+[ext_resource type="Texture2D" uid="uid://b7uh667k4ysh3" path="res://Objects/ControlledByButton/Sprites/contract_icon_90.png" id="7_21hkp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ya42v"]
+size = Vector2(16, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6nw5q"]
+size = Vector2(16, 48)
+
+[node name="BreakableWall" type="RigidBody2D" groups=["breakable_wall", "level_creator_objects"]]
+collision_layer = 12
+collision_mask = 17
+freeze = true
+script = ExtResource("1_mlkx1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_ya42v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.15487596, 0.154876, 0.15487596, 1)
+scale = Vector2(1, 3)
+texture = ExtResource("1_kak5b")
+hframes = 10
+vframes = 10
+
+[node name="MouseArea" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MouseArea"]
+visible = false
+shape = SubResource("RectangleShape2D_6nw5q")
+
+[node name="PanelContainerVertical" type="PanelContainer" parent="."]
+visible = false
+offset_left = 13.0
+offset_top = -40.0
+offset_right = 37.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainerVertical"]
+layout_mode = 2
+
+[node name="ButtonRotate" type="Button" parent="PanelContainerVertical/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_ikmbf")
+icon_alignment = 1
+
+[node name="ButtonExpand" type="Button" parent="PanelContainerVertical/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_7qbxq")
+icon_alignment = 1
+
+[node name="ButtonContract" type="Button" parent="PanelContainerVertical/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("5_ya42v")
+icon_alignment = 1
+
+[node name="PanelContainerHorizontal" type="PanelContainer" parent="."]
+visible = false
+offset_left = -40.0
+offset_top = -36.0
+offset_right = 40.0
+offset_bottom = -12.0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="PanelContainerHorizontal"]
+layout_mode = 2
+
+[node name="ButtonRotate2" type="Button" parent="PanelContainerHorizontal/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_ikmbf")
+icon_alignment = 1
+
+[node name="ButtonExpand2" type="Button" parent="PanelContainerHorizontal/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("6_ya42v")
+icon_alignment = 1
+
+[node name="ButtonContract2" type="Button" parent="PanelContainerHorizontal/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("7_21hkp")
+icon_alignment = 1

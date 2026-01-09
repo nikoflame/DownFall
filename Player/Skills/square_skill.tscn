@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://ufbjou2ocit7"]
+
+[ext_resource type="Script" uid="uid://c07hbtm2svctr" path="res://Player/Skills/square_skill.gd" id="1_y23j1"]
+[ext_resource type="Texture2D" uid="uid://cnug1mpdhtmcf" path="res://Player/Sprites/Square.png" id="1_y45g0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y23j1"]
+size = Vector2(40, 40)
+
+[node name="SquareSkill" type="RigidBody2D"]
+z_index = 1
+collision_mask = 137
+script = ExtResource("1_y23j1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -20)
+shape = SubResource("RectangleShape2D_y23j1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0.60784316, 1, 1)
+position = Vector2(0, -20)
+scale = Vector2(2, 2)
+texture = ExtResource("1_y45g0")
+
+[node name="Button" type="Button" parent="Sprite2D"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.0
+offset_top = -26.0
+offset_right = -6.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2

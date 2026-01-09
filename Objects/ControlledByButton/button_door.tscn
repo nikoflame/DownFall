@@ -1,0 +1,198 @@
+[gd_scene load_steps=19 format=3 uid="uid://c6j301y8f566b"]
+
+[ext_resource type="Script" uid="uid://deklucrjam306" path="res://Objects/ControlledByButton/button_door.gd" id="1_cbmx7"]
+[ext_resource type="Texture2D" uid="uid://dijylx0s6wo85" path="res://Objects/ControlledByButton/Sprites/door_arrow.png" id="2_bbkpp"]
+[ext_resource type="Texture2D" uid="uid://btu4jnixmy2nx" path="res://Tilemap/Sprites/tilemap.png" id="2_g0rba"]
+[ext_resource type="Texture2D" uid="uid://b36ixypn56jla" path="res://Objects/ControlledByButton/Sprites/Button_X.png" id="3_lv5nm"]
+[ext_resource type="Texture2D" uid="uid://ftgushy8abjg" path="res://Objects/ControlledByButton/Sprites/circle_selector.png" id="4_rl6pw"]
+[ext_resource type="Texture2D" uid="uid://doeu3142hwy5u" path="res://Objects/ControlledByButton/Sprites/rotate_icon.png" id="5_pa1s5"]
+[ext_resource type="Texture2D" uid="uid://bmax1p6i215a" path="res://Objects/ControlledByButton/Sprites/hinge_button_icon_0.png" id="5_yuqie"]
+[ext_resource type="Texture2D" uid="uid://0bc0vfemcok0" path="res://Objects/ControlledByButton/Sprites/expand_icon_0.png" id="6_pa1s5"]
+[ext_resource type="Texture2D" uid="uid://c74kax6511oy7" path="res://Objects/ControlledByButton/Sprites/contract_icon_0.png" id="7_lv5nm"]
+[ext_resource type="Texture2D" uid="uid://iphoaxy73t6n" path="res://Objects/ControlledByButton/Sprites/door_open_left.png" id="8_1qtuh"]
+[ext_resource type="Texture2D" uid="uid://bjofqh0nfdgn0" path="res://Objects/ControlledByButton/Sprites/expand_icon_90.png" id="10_xv2ap"]
+[ext_resource type="Texture2D" uid="uid://b7uh667k4ysh3" path="res://Objects/ControlledByButton/Sprites/contract_icon_90.png" id="11_1qtuh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qtuh"]
+size = Vector2(16, 48)
+
+[sub_resource type="Animation" id="Animation_g0rba"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_6yrbh"]
+resource_name = "open_door_ccw"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.5707963267948966]
+}
+
+[sub_resource type="Animation" id="Animation_cbmx7"]
+resource_name = "open_door_cw"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5707963267948966]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6yrbh"]
+_data = {
+&"RESET": SubResource("Animation_g0rba"),
+&"open_door_ccw": SubResource("Animation_6yrbh"),
+&"open_door_cw": SubResource("Animation_cbmx7")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u05sg"]
+size = Vector2(16, 112)
+
+[node name="ButtonDoor" type="RigidBody2D" groups=["level_creator_objects"]]
+collision_layer = 12
+collision_mask = 17
+freeze = true
+script = ExtResource("1_cbmx7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(8, 24)
+shape = SubResource("RectangleShape2D_1qtuh")
+
+[node name="DoorArrow" type="Sprite2D" parent="CollisionShape2D"]
+texture = ExtResource("2_bbkpp")
+
+[node name="ButtonVisualizer" type="Sprite2D" parent="CollisionShape2D"]
+z_index = 1
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_lv5nm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.52038217, 0, 0.00058560685, 1)
+position = Vector2(8, 24)
+scale = Vector2(1, 3)
+texture = ExtResource("2_g0rba")
+hframes = 10
+vframes = 10
+
+[node name="HingeLocator" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_rl6pw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_6yrbh")
+}
+
+[node name="MouseArea" type="Area2D" parent="."]
+visible = false
+position = Vector2(8, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MouseArea"]
+visible = false
+shape = SubResource("RectangleShape2D_u05sg")
+
+[node name="PanelContainerVertical" type="PanelContainer" parent="."]
+visible = false
+offset_left = 19.0
+offset_top = -58.0
+offset_right = 60.0
+offset_bottom = 108.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainerVertical"]
+layout_mode = 2
+
+[node name="ButtonRotate" type="Button" parent="PanelContainerVertical/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("5_pa1s5")
+icon_alignment = 1
+
+[node name="ButtonHinge" type="Button" parent="PanelContainerVertical/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("5_yuqie")
+icon_alignment = 1
+
+[node name="ButtonOpenDir" type="Button" parent="PanelContainerVertical/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("8_1qtuh")
+icon_alignment = 1
+
+[node name="ButtonExpand" type="Button" parent="PanelContainerVertical/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("6_pa1s5")
+icon_alignment = 1
+
+[node name="ButtonContract" type="Button" parent="PanelContainerVertical/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("7_lv5nm")
+icon_alignment = 1
+
+[node name="ButtonButton" type="Button" parent="PanelContainerVertical/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_lv5nm")
+icon_alignment = 1
+
+[node name="PanelContainerHorizontal" type="PanelContainer" parent="."]
+visible = false
+offset_left = -59.0
+offset_top = -35.0
+offset_right = 107.0
+offset_bottom = -4.0
+
+[node name="VBoxContainer" type="HBoxContainer" parent="PanelContainerHorizontal"]
+layout_mode = 2
+
+[node name="ButtonRotate2" type="Button" parent="PanelContainerHorizontal/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("5_pa1s5")
+icon_alignment = 1
+
+[node name="ButtonHinge2" type="Button" parent="PanelContainerHorizontal/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("5_yuqie")
+icon_alignment = 1
+
+[node name="ButtonOpenDir2" type="Button" parent="PanelContainerHorizontal/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("8_1qtuh")
+icon_alignment = 1
+
+[node name="ButtonExpand2" type="Button" parent="PanelContainerHorizontal/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("10_xv2ap")
+icon_alignment = 1
+
+[node name="ButtonContract2" type="Button" parent="PanelContainerHorizontal/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("11_1qtuh")
+icon_alignment = 1
+
+[node name="ButtonButton2" type="Button" parent="PanelContainerHorizontal/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_lv5nm")
+icon_alignment = 1

@@ -1,0 +1,734 @@
+[gd_scene load_steps=4 format=3 uid="uid://hvlm3sl3de1j"]
+
+[ext_resource type="Script" uid="uid://cmax4sm1ugf7v" path="res://GUI/PauseMenu/pause_menu.gd" id="1_2mjep"]
+[ext_resource type="Texture2D" uid="uid://1jqtfh1di330" path="res://GUI/PauseMenu/lock.png" id="2_mqpij"]
+[ext_resource type="Texture2D" uid="uid://dk4psqflt6f32" path="res://GUI/PauseMenu/trash.png" id="3_5jsve"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+layer = 2
+script = ExtResource("1_2mjep")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.24313726, 0.24313726, 0.24313726, 0.3137255)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.875
+offset_top = -266.0111
+offset_right = 177.875
+offset_bottom = 266.0111
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LabelPaused" type="Label" parent="VBoxContainer"]
+modulate = Color(0.6542321, 0.6542321, 0.654232, 1)
+layout_mode = 2
+text = "- PAUSED -"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ButtonStart" type="Button" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Return to Start"
+
+[node name="LabelMusic" type="Label" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Music Volume"
+horizontal_alignment = 1
+
+[node name="HSliderMusic" type="HSlider" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+min_value = -24.0
+max_value = 24.0
+
+[node name="LabelSound" type="Label" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Sound Volume"
+horizontal_alignment = 1
+
+[node name="HSliderSound" type="HSlider" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+min_value = -24.0
+max_value = 24.0
+
+[node name="LabelLoadNewLevel" type="Label" parent="VBoxContainer"]
+modulate = Color(0.6542321, 0.6542321, 0.654232, 1)
+layout_mode = 2
+text = "Load New LeveL"
+horizontal_alignment = 1
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button_01" type="Button" parent="VBoxContainer/HBoxContainer1" groups=["pause_menu_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "01"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_02" type="Button" parent="VBoxContainer/HBoxContainer1" groups=["pause_menu_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "02"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_03" type="Button" parent="VBoxContainer/HBoxContainer1" groups=["pause_menu_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "03"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_04" type="Button" parent="VBoxContainer/HBoxContainer1" groups=["pause_menu_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "04"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_05" type="Button" parent="VBoxContainer/HBoxContainer1" groups=["pause_menu_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "05"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button_06" type="Button" parent="VBoxContainer/HBoxContainer2" groups=["pause_menu_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "06"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_07" type="Button" parent="VBoxContainer/HBoxContainer2" groups=["pause_menu_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "07"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_08" type="Button" parent="VBoxContainer/HBoxContainer2" groups=["pause_menu_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "08"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_09" type="Button" parent="VBoxContainer/HBoxContainer2" groups=["pause_menu_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "09"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_10" type="Button" parent="VBoxContainer/HBoxContainer2" groups=["pause_menu_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "10"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button_11" type="Button" parent="VBoxContainer/HBoxContainer3" groups=["pause_menu_buttons"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "11"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_BLANK1" type="Button" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="Button_12" type="Button" parent="VBoxContainer/HBoxContainer3" groups=["pause_menu_buttons"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "12"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_BLANK2" type="Button" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="Button_13" type="Button" parent="VBoxContainer/HBoxContainer3" groups=["pause_menu_buttons"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "13"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_BLANK3" type="Button" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="Button_14" type="Button" parent="VBoxContainer/HBoxContainer3" groups=["pause_menu_buttons"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "14"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_BLANK4" type="Button" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="Button_15" type="Button" parent="VBoxContainer/HBoxContainer3" groups=["pause_menu_buttons"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "15"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_BLANK5" type="Button" parent="VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button_16" type="Button" parent="VBoxContainer/HBoxContainer4" groups=["pause_menu_buttons"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "16"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_BLANK6" type="Button" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="Button_17" type="Button" parent="VBoxContainer/HBoxContainer4" groups=["pause_menu_buttons"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "17"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_BLANK7" type="Button" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="Button_18" type="Button" parent="VBoxContainer/HBoxContainer4" groups=["pause_menu_buttons"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "18"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_BLANK8" type="Button" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="Button_19" type="Button" parent="VBoxContainer/HBoxContainer4" groups=["pause_menu_buttons"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "19"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_BLANK9" type="Button" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="Button_20" type="Button" parent="VBoxContainer/HBoxContainer4" groups=["pause_menu_buttons"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "20"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_BLANK10" type="Button" parent="VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button_21" type="Button" parent="VBoxContainer/HBoxContainer5" groups=["pause_menu_buttons"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "21"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_BLANK11" type="Button" parent="VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="Button_22" type="Button" parent="VBoxContainer/HBoxContainer5" groups=["pause_menu_buttons"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "22"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_BLANK12" type="Button" parent="VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="Button_23" type="Button" parent="VBoxContainer/HBoxContainer5" groups=["pause_menu_buttons"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "23"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_BLANK13" type="Button" parent="VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="Button_24" type="Button" parent="VBoxContainer/HBoxContainer5" groups=["pause_menu_buttons"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "24"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_BLANK14" type="Button" parent="VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="Button_25" type="Button" parent="VBoxContainer/HBoxContainer5" groups=["pause_menu_buttons"]]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "25"
+icon = ExtResource("2_mqpij")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button_BLANK15" type="Button" parent="VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+offset_left = 180.0
+offset_top = 218.0
+offset_right = 386.0
+offset_bottom = 452.84003
+
+[node name="Label" type="Label" parent="VBoxContainer2"]
+modulate = Color(0.654902, 0.654902, 0.654902, 1)
+layout_mode = 2
+text = "Custom Levels"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button_C1" type="Button" parent="VBoxContainer2/HBoxContainer" groups=["pause_menu_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "C1"
+
+[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer/Button_C1" groups=["pause_menu_buttons"]]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+offset_bottom = 24.0
+grow_horizontal = 0
+icon = ExtResource("3_5jsve")
+flat = true
+
+[node name="Button_BLANK1" type="Button" parent="VBoxContainer2/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="Button_C2" type="Button" parent="VBoxContainer2/HBoxContainer" groups=["pause_menu_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "C2"
+
+[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer/Button_C2" groups=["pause_menu_buttons"]]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+offset_bottom = 24.0
+grow_horizontal = 0
+icon = ExtResource("3_5jsve")
+flat = true
+
+[node name="Button_BLANK2" type="Button" parent="VBoxContainer2/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="Button_C3" type="Button" parent="VBoxContainer2/HBoxContainer" groups=["pause_menu_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "C3"
+
+[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer/Button_C3" groups=["pause_menu_buttons"]]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+offset_bottom = 24.0
+grow_horizontal = 0
+icon = ExtResource("3_5jsve")
+flat = true
+
+[node name="Button_BLANK3" type="Button" parent="VBoxContainer2/HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button_C4" type="Button" parent="VBoxContainer2/HBoxContainer2" groups=["pause_menu_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "C4"
+
+[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer2/Button_C4" groups=["pause_menu_buttons"]]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+offset_bottom = 24.0
+grow_horizontal = 0
+icon = ExtResource("3_5jsve")
+flat = true
+
+[node name="Button_BLANK4" type="Button" parent="VBoxContainer2/HBoxContainer2"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="Button_C5" type="Button" parent="VBoxContainer2/HBoxContainer2" groups=["pause_menu_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "C5"
+
+[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer2/Button_C5" groups=["pause_menu_buttons"]]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+offset_bottom = 24.0
+grow_horizontal = 0
+icon = ExtResource("3_5jsve")
+flat = true
+
+[node name="Button_BLANK5" type="Button" parent="VBoxContainer2/HBoxContainer2"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="Button_C6" type="Button" parent="VBoxContainer2/HBoxContainer2" groups=["pause_menu_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "C6"
+
+[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer2/Button_C6" groups=["pause_menu_buttons"]]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+offset_bottom = 24.0
+grow_horizontal = 0
+icon = ExtResource("3_5jsve")
+flat = true
+
+[node name="Button_BLANK6" type="Button" parent="VBoxContainer2/HBoxContainer2"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button_C7" type="Button" parent="VBoxContainer2/HBoxContainer3" groups=["pause_menu_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "C7"
+
+[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer3/Button_C7" groups=["pause_menu_buttons"]]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+offset_bottom = 24.0
+grow_horizontal = 0
+icon = ExtResource("3_5jsve")
+flat = true
+
+[node name="Button_BLANK7" type="Button" parent="VBoxContainer2/HBoxContainer3"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="Button_C8" type="Button" parent="VBoxContainer2/HBoxContainer3" groups=["pause_menu_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "C8"
+
+[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer3/Button_C8" groups=["pause_menu_buttons"]]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+offset_bottom = 24.0
+grow_horizontal = 0
+icon = ExtResource("3_5jsve")
+flat = true
+
+[node name="Button_BLANK8" type="Button" parent="VBoxContainer2/HBoxContainer3"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="Button_C9" type="Button" parent="VBoxContainer2/HBoxContainer3" groups=["pause_menu_buttons"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "C9"
+
+[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer3/Button_C9" groups=["pause_menu_buttons"]]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+offset_bottom = 24.0
+grow_horizontal = 0
+icon = ExtResource("3_5jsve")
+flat = true
+
+[node name="Button_BLANK9" type="Button" parent="VBoxContainer2/HBoxContainer3"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+flat = true
+
+[node name="ButtonReset" type="Button" parent="." groups=["pause_menu_buttons"]]
+modulate = Color(1, 0, 0, 1)
+offset_left = 904.0
+offset_top = 608.0
+offset_right = 1138.0
+offset_bottom = 639.0
+text = "Reset Level"
+
+[node name="TrashPopup" type="PanelContainer" parent="."]
+visible = false
+z_index = 5
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -390.0
+offset_top = -255.0
+offset_right = -196.0
+offset_bottom = -116.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TrashPopup"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TrashPopup/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="TrashPopup/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Are you sure you want
+to delete this level?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonYes" type="Button" parent="TrashPopup/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Yes"
+
+[node name="ButtonNo" type="Button" parent="TrashPopup/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "No"
+
+[node name="CannotDeletePopup" type="PanelContainer" parent="."]
+visible = false
+z_index = 5
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -497.0
+offset_top = -213.0
+offset_right = -192.0
+offset_bottom = -114.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CannotDeletePopup"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CannotDeletePopup/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="CannotDeletePopup/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Cannot delete currently loaded level."
+vertical_alignment = 1
+
+[node name="ButtonOK" type="Button" parent="CannotDeletePopup/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "OK"
+
+[node name="Control1" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -759.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -438.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2

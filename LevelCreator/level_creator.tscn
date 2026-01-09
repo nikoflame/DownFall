@@ -1,0 +1,458 @@
+[gd_scene load_steps=31 format=4 uid="uid://ixoan6ihawbx"]
+
+[ext_resource type="Script" uid="uid://cth8xjg3cpg2s" path="res://LevelCreator/level_creator.gd" id="1_sjw3m"]
+[ext_resource type="PackedScene" uid="uid://dfs1slgsvr2iv" path="res://Tilemap/tilemap.tscn" id="1_tkbsw"]
+[ext_resource type="Texture2D" uid="uid://d1sio44d5y24o" path="res://LevelCreator/Sprites/tile0.png" id="2_5xjuv"]
+[ext_resource type="Texture2D" uid="uid://ch3m3wgmovogy" path="res://LevelCreator/Sprites/grabber.png" id="3_0lvop"]
+[ext_resource type="Texture2D" uid="uid://cc3nao20lbwff" path="res://LevelCreator/Sprites/tile1.png" id="3_1c7gi"]
+[ext_resource type="Texture2D" uid="uid://co7qrutcxmk5j" path="res://LevelCreator/Sprites/tile2.png" id="4_6wasd"]
+[ext_resource type="Texture2D" uid="uid://c10ho458vpaf2" path="res://LevelCreator/Sprites/tile3.png" id="5_pk0cm"]
+[ext_resource type="Texture2D" uid="uid://b021132yofqcn" path="res://LevelCreator/Sprites/tile4.png" id="6_26t0e"]
+[ext_resource type="Texture2D" uid="uid://s05v3qxygu87" path="res://LevelCreator/Sprites/tile5.png" id="7_k7dsu"]
+[ext_resource type="Texture2D" uid="uid://bgriy1yy2fsnk" path="res://LevelCreator/Sprites/tile6.png" id="8_vy3ki"]
+[ext_resource type="Texture2D" uid="uid://c2yckdympjlqg" path="res://LevelCreator/Sprites/tile7.png" id="9_mkscx"]
+[ext_resource type="Texture2D" uid="uid://c1tgqbk8wmlko" path="res://LevelCreator/Sprites/tile8.png" id="10_oaeds"]
+[ext_resource type="Texture2D" uid="uid://cfdk6sh8kp24" path="res://LevelCreator/Sprites/tile9.png" id="11_rvawl"]
+[ext_resource type="Texture2D" uid="uid://bdjq6jmaw23c4" path="res://LevelCreator/Sprites/tile10.png" id="12_sjw3m"]
+[ext_resource type="Texture2D" uid="uid://b25l5w7i4npsp" path="res://LevelCreator/Sprites/tile11.png" id="13_7lono"]
+[ext_resource type="Texture2D" uid="uid://chx7k32cu8a4e" path="res://LevelCreator/Sprites/tile12.png" id="14_0lvop"]
+[ext_resource type="Texture2D" uid="uid://cu8wo360rpnqo" path="res://LevelCreator/Sprites/tile13.png" id="15_2e43r"]
+[ext_resource type="Texture2D" uid="uid://dg7nbionw5ejt" path="res://LevelCreator/Sprites/tile14.png" id="16_b70u0"]
+[ext_resource type="Texture2D" uid="uid://cp57rpg3apuoy" path="res://LevelCreator/Sprites/tile15.png" id="17_7kt4h"]
+[ext_resource type="Texture2D" uid="uid://cbpj6cvlk40kc" path="res://LevelCreator/Sprites/tile16.png" id="18_q8dhe"]
+[ext_resource type="Texture2D" uid="uid://5wxli0jneki5" path="res://LevelCreator/Sprites/tile17.png" id="19_jt1jh"]
+[ext_resource type="Texture2D" uid="uid://bfviigtryrb00" path="res://LevelCreator/Sprites/tile18.png" id="20_1urgf"]
+[ext_resource type="Texture2D" uid="uid://rvkf37opsp8c" path="res://LevelCreator/Sprites/Square.png" id="21_rvawl"]
+[ext_resource type="Texture2D" uid="uid://bpyw0b2oqn11x" path="res://LevelCreator/Sprites/Triangle.png" id="22_sjw3m"]
+[ext_resource type="Texture2D" uid="uid://vfkjijl1hu26" path="res://LevelCreator/Sprites/Circle.png" id="23_7lono"]
+[ext_resource type="Texture2D" uid="uid://bkwab7mffpqu7" path="res://LevelCreator/Sprites/Moon.png" id="24_0lvop"]
+[ext_resource type="Texture2D" uid="uid://b5la0yh7fanom" path="res://LevelCreator/Sprites/BreakableDoor.png" id="25_2e43r"]
+[ext_resource type="Texture2D" uid="uid://dgoqihjt5vld8" path="res://LevelCreator/Sprites/Door.png" id="26_b70u0"]
+[ext_resource type="Texture2D" uid="uid://d10wugmxu2d0p" path="res://LevelCreator/Sprites/Button.png" id="27_7kt4h"]
+[ext_resource type="Texture2D" uid="uid://bc8l4cq05a18u" path="res://LevelCreator/Sprites/goal_icon.png" id="29_7lono"]
+
+[node name="LevelCreator" type="Node2D" groups=["level_creator"]]
+script = ExtResource("1_sjw3m")
+
+[node name="Tilemap" parent="." instance=ExtResource("1_tkbsw")]
+tile_map_data = PackedByteArray("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")
+
+[node name="MovableSprite" type="Sprite2D" parent="."]
+visible = false
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 656.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MenuMover" type="Node2D" parent="Control"]
+z_index = 4
+position = Vector2(980, 42)
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/MenuMover"]
+offset_left = -108.0
+offset_top = -12.0
+offset_right = 140.0
+offset_bottom = 131.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MenuMover/PanelContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/MenuMover/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ButtonDrag" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer" groups=["level_creator_menu_top"]]
+layout_mode = 2
+size_flags_vertical = 3
+icon = ExtResource("3_0lvop")
+icon_alignment = 1
+
+[node name="ButtonX" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer" groups=["level_creator_menu_top"]]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+text = "X"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/MenuMover/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Tile0" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer2" groups=["level_creator_menu_tile"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("2_5xjuv")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tile1" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer2" groups=["level_creator_menu_tile"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("3_1c7gi")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tile2" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer2" groups=["level_creator_menu_tile"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("4_6wasd")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tile3" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer2" groups=["level_creator_menu_tile"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("5_pk0cm")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tile4" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer2" groups=["level_creator_menu_tile"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("6_26t0e")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tile5" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer2" groups=["level_creator_menu_tile"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("7_k7dsu")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tile6" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer2" groups=["level_creator_menu_tile"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("8_vy3ki")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tile7" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer2" groups=["level_creator_menu_tile"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("9_mkscx")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tile8" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer2" groups=["level_creator_menu_tile"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("10_oaeds")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tile9" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer2" groups=["level_creator_menu_tile"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("11_rvawl")
+icon_alignment = 1
+expand_icon = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control/MenuMover/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Tile10" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer3" groups=["level_creator_menu_tile"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("12_sjw3m")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tile11" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer3" groups=["level_creator_menu_tile"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("13_7lono")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tile12" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer3" groups=["level_creator_menu_tile"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("14_0lvop")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tile13" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer3" groups=["level_creator_menu_tile"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("15_2e43r")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tile14" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer3" groups=["level_creator_menu_tile"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("16_b70u0")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tile15" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer3" groups=["level_creator_menu_tile"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("17_7kt4h")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tile16" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer3" groups=["level_creator_menu_tile"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("18_q8dhe")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tile17" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer3" groups=["level_creator_menu_tile"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("19_jt1jh")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Tile18" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer3" groups=["level_creator_menu_tile"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("20_1urgf")
+icon_alignment = 1
+expand_icon = true
+
+[node name="TileEMPTY" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+icon_alignment = 1
+expand_icon = true
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Control/MenuMover/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SquareSpawn" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer4" groups=["level_creator_menu_spawn"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("21_rvawl")
+icon_alignment = 1
+expand_icon = true
+
+[node name="TriangleSpawn" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer4" groups=["level_creator_menu_spawn"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("22_sjw3m")
+icon_alignment = 1
+expand_icon = true
+
+[node name="CircleSpawn" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer4" groups=["level_creator_menu_spawn"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("23_7lono")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MoonSpawn" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer4" groups=["level_creator_menu_spawn"]]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("24_0lvop")
+icon_alignment = 1
+expand_icon = true
+
+[node name="BreakableDoor" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("25_2e43r")
+icon_alignment = 1
+expand_icon = true
+
+[node name="ButtonDoor" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("26_b70u0")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("27_7kt4h")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Goal" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("29_7lono")
+icon_alignment = 1
+expand_icon = true
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Control/MenuMover/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TestLevel" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Test"
+
+[node name="SaveLevel" type="Button" parent="Control/MenuMover/PanelContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Save"
+
+[node name="ReturnToStartPopup" type="PanelContainer" parent="Control"]
+visible = false
+z_index = 5
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -48.0
+offset_right = 74.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ReturnToStartPopup"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="Control/ReturnToStartPopup/VBoxContainer"]
+layout_mode = 2
+text = "Return to Start?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonYes" type="Button" parent="Control/ReturnToStartPopup/VBoxContainer"]
+layout_mode = 2
+text = "Yes"
+
+[node name="ButtonNo" type="Button" parent="Control/ReturnToStartPopup/VBoxContainer"]
+layout_mode = 2
+text = "No"
+
+[node name="SaveConfirmationPopup" type="PanelContainer" parent="Control"]
+visible = false
+z_index = 5
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -48.0
+offset_right = 74.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/SaveConfirmationPopup"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/SaveConfirmationPopup/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="Control/SaveConfirmationPopup/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "This will end your session.
+Are you sure you are finished?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonYes" type="Button" parent="Control/SaveConfirmationPopup/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Yes"
+
+[node name="ButtonNo" type="Button" parent="Control/SaveConfirmationPopup/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "No"
+
+[node name="NoSavePopup" type="PanelContainer" parent="Control"]
+visible = false
+z_index = 5
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -153.0
+offset_top = -93.0
+offset_right = 153.0
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/NoSavePopup"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/NoSavePopup/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Control/NoSavePopup/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Cannot start or save level without:
+● a Goal   ꩜
+● at least 1 Character   ■ ▲ ● ⏾"
+vertical_alignment = 1
+
+[node name="ButtonOK" type="Button" parent="Control/NoSavePopup/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "OK"
+
+[node name="FilepathFullPopup" type="PanelContainer" parent="Control"]
+visible = false
+z_index = 5
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = -70.0
+offset_right = 130.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/FilepathFullPopup"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/FilepathFullPopup/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Control/FilepathFullPopup/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "You can only make 9 custom
+levels. Please delete one."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonOK" type="Button" parent="Control/FilepathFullPopup/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "OK"

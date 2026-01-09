@@ -1,0 +1,200 @@
+[gd_scene load_steps=9 format=3 uid="uid://cvnfslcxnon8s"]
+
+[ext_resource type="Script" uid="uid://cx521p0iq8gwd" path="res://00_Globals/SceneTransition.gd" id="1_6rk30"]
+[ext_resource type="Shader" uid="uid://dh1oleyo8ettu" path="res://GUI/SceneTransition/scene_transition.gdshader" id="2_td267"]
+
+[sub_resource type="Animation" id="Animation_2u6hy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/radius_px")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [150.0]
+}
+
+[sub_resource type="Animation" id="Animation_td267"]
+resource_name = "circle_in"
+length = 1.1
+step = 0.1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"set_transition_pos"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/radius_px")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [150.0, 150.0, 0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_qhvlr"]
+resource_name = "circle_in_start"
+length = 1.1
+step = 0.1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"set_transition_pos"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/radius_px")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [800.0, 0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_kfe0w"]
+resource_name = "circle_out"
+length = 1.1
+step = 0.1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"set_transition_pos"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/radius_px")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.100000024, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1000.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2u6hy"]
+_data = {
+&"RESET": SubResource("Animation_2u6hy"),
+&"circle_in": SubResource("Animation_td267"),
+&"circle_in_start": SubResource("Animation_qhvlr"),
+&"circle_out": SubResource("Animation_kfe0w")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_td267"]
+shader = ExtResource("2_td267")
+shader_parameter/center_uv = Vector2(0.5, 0.5)
+shader_parameter/radius_px = 150.0
+shader_parameter/softness_px = 0.0
+
+[node name="SceneTransition" type="CanvasLayer"]
+process_mode = 3
+layer = 2
+script = ExtResource("1_6rk30")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control"]
+libraries = {
+&"": SubResource("AnimationLibrary_2u6hy")
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+material = SubResource("ShaderMaterial_td267")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LoadingScreen" type="ColorRect" parent="."]
+visible = false
+z_index = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="LoadingScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -247.99997
+offset_top = -73.0
+offset_right = -81.99997
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+text = "Loading... Please wait"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="LoadingScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -191.5
+offset_top = 21.0
+offset_right = 191.5
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+step = 10.0
+show_percentage = false

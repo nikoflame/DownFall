@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://by33du57f25"]
+
+[ext_resource type="Script" uid="uid://b6mxfxndpilsl" path="res://GUI/HUD/gui.gd" id="1_3w5pf"]
+
+[node name="Gui" type="CanvasLayer"]
+script = ExtResource("1_3w5pf")
+
+[node name="ButtonReset" type="Button" parent="."]
+modulate = Color(1, 0.44313726, 0.44705883, 1)
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 125.0
+offset_bottom = 56.0
+scale = Vector2(2, 2)
+text = "Reset Level"

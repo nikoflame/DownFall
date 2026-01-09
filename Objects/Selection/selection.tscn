@@ -1,0 +1,96 @@
+[gd_scene load_steps=9 format=3 uid="uid://ciusgct5ns6sy"]
+
+[ext_resource type="Shader" uid="uid://dvbdvydb604oh" path="res://Objects/Selection/shine_sprite.gdshader" id="1_aapmg"]
+[ext_resource type="Script" uid="uid://bjl6j2l6hbuqc" path="res://Objects/Selection/selection.gd" id="1_t2qfj"]
+[ext_resource type="Texture2D" uid="uid://bx8xidt71fp3m" path="res://Objects/Selection/shine.png" id="2_t2qfj"]
+[ext_resource type="Texture2D" uid="uid://c5ewcc33aoiov" path="res://Objects/Selection/arrow.png" id="3_wr1gk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e35p0"]
+shader = ExtResource("1_aapmg")
+shader_parameter/half_size_px = Vector2(32, 32)
+shader_parameter/inner_radius = 0.0
+shader_parameter/outer_radius = 1.0
+
+[sub_resource type="Animation" id="Animation_wr1gk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ShineSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ArrowSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -24)]
+}
+
+[sub_resource type="Animation" id="Animation_t2qfj"]
+resource_name = "selection"
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ShineSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ArrowSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -40), Vector2(0, -39), Vector2(0, -38)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e35p0"]
+_data = {
+&"RESET": SubResource("Animation_wr1gk"),
+&"selection": SubResource("Animation_t2qfj")
+}
+
+[node name="Selection" type="Node2D"]
+visible = false
+script = ExtResource("1_t2qfj")
+
+[node name="ShineSprite" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.29411766)
+z_index = 1
+material = SubResource("ShaderMaterial_e35p0")
+position = Vector2(0, -10)
+texture = ExtResource("2_t2qfj")
+hframes = 4
+
+[node name="ArrowSprite" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(0, -24)
+texture = ExtResource("3_wr1gk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_e35p0")
+}

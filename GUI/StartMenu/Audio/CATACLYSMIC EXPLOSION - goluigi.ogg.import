@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bdkslbvm2wkna"
+path="res://.godot/imported/CATACLYSMIC EXPLOSION - goluigi.ogg-32b8c11abad663610163fe783f036ce4.oggvorbisstr"
+
+[deps]
+
+source_file="res://GUI/StartMenu/Audio/CATACLYSMIC EXPLOSION - goluigi.ogg"
+dest_files=["res://.godot/imported/CATACLYSMIC EXPLOSION - goluigi.ogg-32b8c11abad663610163fe783f036ce4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
