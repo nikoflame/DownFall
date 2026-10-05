@@ -113,6 +113,9 @@ var line_size : int = 2
 var line_color : Color = Color(0.0, 0.906, 1.0, 1.0)
 var goal_offset : Vector2 = Vector2(0, 0)
 var save_my_level : bool = false
+var tile_rotation : int = 0
+var tile_flip_h : bool = false
+var tile_flip_v : bool = false
 
 func _ready() -> void:
 	_button_connections()
@@ -165,6 +168,10 @@ func _on_tile_pressed(btn : Button) -> void:
 	sprite_step = Vector2(16, 16)
 	movable_sprite.texture = btn.icon
 	set_atlas_coords(btn)
+	tile_rotation = 0
+	tile_flip_h = false
+	tile_flip_v = false
+	_update_tile_transform()
 	_hide_object_menu()
 	check_if_goal_used()
 
@@ -378,18 +385,92 @@ func _input(event: InputEvent) -> void:
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("rotate_tile_left"):
-		alternative_tile = alternative_tile | TileTransform.ROTATE_270
-		movable_sprite.rotate(deg_to_rad(270))
-	elif event.is_action_pressed("rotate_tile_right"):
-		alternative_tile = alternative_tile | TileTransform.ROTATE_90
-		movable_sprite.rotate(deg_to_rad(90))
-	elif event.is_action_pressed("flip_tile_h"):
-		alternative_tile = alternative_tile | TileSetAtlasSource.TRANSFORM_FLIP_H
-		movable_sprite.scale.x = movable_sprite.scale.x * -1
-	elif event.is_action_pressed("flip_tile_v"):
-		alternative_tile = alternative_tile | TileSetAtlasSource.TRANSFORM_FLIP_V
-		movable_sprite.scale.y = movable_sprite.scale.y * -1
+		tile_rotation = wrapi(tile_rotation - 1, 0, 4)
+		_update_tile_transform()
 	
+	elif event.is_action_pressed("rotate_tile_right"):
+		tile_rotation = wrapi(tile_rotation + 1, 0, 4)
+		_update_tile_transform()
+	
+	elif event.is_action_pressed("flip_tile_h"):
+		tile_flip_h = !tile_flip_h
+		_update_tile_transform()
+	
+	elif event.is_action_pressed("flip_tile_v"):
+		tile_flip_v = !tile_flip_v
+		_update_tile_transform()
+
+func _update_tile_transform() -> void:
+	# Update preview.
+	movable_sprite.rotation = deg_to_rad(tile_rotation * 90.0)
+	
+	movable_sprite.scale = Vector2(
+		-1.0 if tile_flip_h else 1.0,
+		-1.0 if tile_flip_v else 1.0
+	)
+	
+	# Update TileMap alternative transform.
+	alternative_tile = _get_tile_transform(
+		tile_rotation,
+		tile_flip_h,
+		tile_flip_v
+	)
+	
+func _get_tile_transform(
+	_rotation : int,
+	flip_h : bool,
+	flip_v : bool
+) -> int:
+	match _rotation:
+		0:
+			if flip_h and flip_v:
+				return TileTransform.ROTATE_180
+			elif flip_h:
+				return TileSetAtlasSource.TRANSFORM_FLIP_H
+			elif flip_v:
+				return TileSetAtlasSource.TRANSFORM_FLIP_V
+			else:
+				return TileTransform.ROTATE_0
+		
+		1:
+			if flip_h and flip_v:
+				return TileTransform.ROTATE_270
+			elif flip_h:
+				return (
+					TileSetAtlasSource.TRANSFORM_TRANSPOSE
+					| TileSetAtlasSource.TRANSFORM_FLIP_H
+					| TileSetAtlasSource.TRANSFORM_FLIP_V
+				)
+			elif flip_v:
+				return TileSetAtlasSource.TRANSFORM_TRANSPOSE
+			else:
+				return TileTransform.ROTATE_90
+		
+		2:
+			if flip_h and flip_v:
+				return TileTransform.ROTATE_0
+			elif flip_h:
+				return TileSetAtlasSource.TRANSFORM_FLIP_V
+			elif flip_v:
+				return TileSetAtlasSource.TRANSFORM_FLIP_H
+			else:
+				return TileTransform.ROTATE_180
+		
+		3:
+			if flip_h and flip_v:
+				return TileTransform.ROTATE_90
+			elif flip_h:
+				return TileSetAtlasSource.TRANSFORM_TRANSPOSE
+			elif flip_v:
+				return (
+					TileSetAtlasSource.TRANSFORM_TRANSPOSE
+					| TileSetAtlasSource.TRANSFORM_FLIP_H
+					| TileSetAtlasSource.TRANSFORM_FLIP_V
+				)
+			else:
+				return TileTransform.ROTATE_270
+	
+	return 0
 
 # ~~~~~~~~~~~~ PERSONAL FUNCTIONS ~~~~~~~~~~~~~
 func check_sprite_visibility() -> void:

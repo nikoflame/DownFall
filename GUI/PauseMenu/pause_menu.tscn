@@ -1,15 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://hvlm3sl3de1j"]
+[gd_scene format=3 uid="uid://hvlm3sl3de1j"]
 
 [ext_resource type="Script" uid="uid://cmax4sm1ugf7v" path="res://GUI/PauseMenu/pause_menu.gd" id="1_2mjep"]
 [ext_resource type="Texture2D" uid="uid://1jqtfh1di330" path="res://GUI/PauseMenu/lock.png" id="2_mqpij"]
 [ext_resource type="Texture2D" uid="uid://dk4psqflt6f32" path="res://GUI/PauseMenu/trash.png" id="3_5jsve"]
 
-[node name="PauseMenu" type="CanvasLayer"]
+[node name="PauseMenu" type="CanvasLayer" unique_id=2029664024]
 process_mode = 3
 layer = 2
 script = ExtResource("1_2mjep")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=747745004]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -18,7 +18,7 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.24313726, 0.24313726, 0.24313726, 0.3137255)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=327923619]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -31,50 +31,50 @@ offset_bottom = 266.0111
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="LabelPaused" type="Label" parent="VBoxContainer"]
+[node name="LabelPaused" type="Label" parent="VBoxContainer" unique_id=1055632801]
 modulate = Color(0.6542321, 0.6542321, 0.654232, 1)
 layout_mode = 2
 text = "- PAUSED -"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=421691236]
 layout_mode = 2
 
-[node name="ButtonStart" type="Button" parent="VBoxContainer/VBoxContainer"]
+[node name="ButtonStart" type="Button" parent="VBoxContainer/VBoxContainer" unique_id=979175880]
 layout_mode = 2
 text = "Return to Start"
 
-[node name="LabelMusic" type="Label" parent="VBoxContainer/VBoxContainer"]
+[node name="LabelMusic" type="Label" parent="VBoxContainer/VBoxContainer" unique_id=1621234377]
 layout_mode = 2
 text = "Music Volume"
 horizontal_alignment = 1
 
-[node name="HSliderMusic" type="HSlider" parent="VBoxContainer/VBoxContainer"]
+[node name="HSliderMusic" type="HSlider" parent="VBoxContainer/VBoxContainer" unique_id=1908356139]
 layout_mode = 2
 min_value = -24.0
 max_value = 24.0
 
-[node name="LabelSound" type="Label" parent="VBoxContainer/VBoxContainer"]
+[node name="LabelSound" type="Label" parent="VBoxContainer/VBoxContainer" unique_id=969056045]
 layout_mode = 2
 text = "Sound Volume"
 horizontal_alignment = 1
 
-[node name="HSliderSound" type="HSlider" parent="VBoxContainer/VBoxContainer"]
+[node name="HSliderSound" type="HSlider" parent="VBoxContainer/VBoxContainer" unique_id=411741917]
 layout_mode = 2
 min_value = -24.0
 max_value = 24.0
 
-[node name="LabelLoadNewLevel" type="Label" parent="VBoxContainer"]
+[node name="LabelLoadNewLevel" type="Label" parent="VBoxContainer" unique_id=1726591036]
 modulate = Color(0.6542321, 0.6542321, 0.654232, 1)
 layout_mode = 2
 text = "Load New LeveL"
 horizontal_alignment = 1
 
-[node name="HBoxContainer1" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer1" type="HBoxContainer" parent="VBoxContainer" unique_id=1040154942]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button_01" type="Button" parent="VBoxContainer/HBoxContainer1" groups=["pause_menu_buttons"]]
+[node name="Button_01" type="Button" parent="VBoxContainer/HBoxContainer1" unique_id=96681810 groups=["pause_menu_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "01"
@@ -82,7 +82,7 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_02" type="Button" parent="VBoxContainer/HBoxContainer1" groups=["pause_menu_buttons"]]
+[node name="Button_02" type="Button" parent="VBoxContainer/HBoxContainer1" unique_id=720445724 groups=["pause_menu_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "02"
@@ -90,7 +90,7 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_03" type="Button" parent="VBoxContainer/HBoxContainer1" groups=["pause_menu_buttons"]]
+[node name="Button_03" type="Button" parent="VBoxContainer/HBoxContainer1" unique_id=40673434 groups=["pause_menu_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "03"
@@ -98,7 +98,7 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_04" type="Button" parent="VBoxContainer/HBoxContainer1" groups=["pause_menu_buttons"]]
+[node name="Button_04" type="Button" parent="VBoxContainer/HBoxContainer1" unique_id=942848481 groups=["pause_menu_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "04"
@@ -106,7 +106,7 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_05" type="Button" parent="VBoxContainer/HBoxContainer1" groups=["pause_menu_buttons"]]
+[node name="Button_05" type="Button" parent="VBoxContainer/HBoxContainer1" unique_id=307934375 groups=["pause_menu_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "05"
@@ -114,11 +114,11 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1219460810]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button_06" type="Button" parent="VBoxContainer/HBoxContainer2" groups=["pause_menu_buttons"]]
+[node name="Button_06" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1454157137 groups=["pause_menu_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "06"
@@ -126,7 +126,7 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_07" type="Button" parent="VBoxContainer/HBoxContainer2" groups=["pause_menu_buttons"]]
+[node name="Button_07" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1989111751 groups=["pause_menu_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "07"
@@ -134,7 +134,7 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_08" type="Button" parent="VBoxContainer/HBoxContainer2" groups=["pause_menu_buttons"]]
+[node name="Button_08" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=100300755 groups=["pause_menu_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "08"
@@ -142,7 +142,7 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_09" type="Button" parent="VBoxContainer/HBoxContainer2" groups=["pause_menu_buttons"]]
+[node name="Button_09" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1564554177 groups=["pause_menu_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "09"
@@ -150,7 +150,7 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_10" type="Button" parent="VBoxContainer/HBoxContainer2" groups=["pause_menu_buttons"]]
+[node name="Button_10" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1601887367 groups=["pause_menu_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "10"
@@ -158,11 +158,11 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=2048308935]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button_11" type="Button" parent="VBoxContainer/HBoxContainer3" groups=["pause_menu_buttons"]]
+[node name="Button_11" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=1472905954 groups=["pause_menu_buttons"]]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -171,13 +171,13 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_BLANK1" type="Button" parent="VBoxContainer/HBoxContainer3"]
+[node name="Button_BLANK1" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=564214875]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="Button_12" type="Button" parent="VBoxContainer/HBoxContainer3" groups=["pause_menu_buttons"]]
+[node name="Button_12" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=1559311467 groups=["pause_menu_buttons"]]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -186,13 +186,13 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_BLANK2" type="Button" parent="VBoxContainer/HBoxContainer3"]
+[node name="Button_BLANK2" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=1549731489]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="Button_13" type="Button" parent="VBoxContainer/HBoxContainer3" groups=["pause_menu_buttons"]]
+[node name="Button_13" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=881715573 groups=["pause_menu_buttons"]]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -201,13 +201,13 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_BLANK3" type="Button" parent="VBoxContainer/HBoxContainer3"]
+[node name="Button_BLANK3" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=335106863]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="Button_14" type="Button" parent="VBoxContainer/HBoxContainer3" groups=["pause_menu_buttons"]]
+[node name="Button_14" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=1184901510 groups=["pause_menu_buttons"]]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -216,13 +216,13 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_BLANK4" type="Button" parent="VBoxContainer/HBoxContainer3"]
+[node name="Button_BLANK4" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=98358442]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="Button_15" type="Button" parent="VBoxContainer/HBoxContainer3" groups=["pause_menu_buttons"]]
+[node name="Button_15" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=1796671016 groups=["pause_menu_buttons"]]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -231,17 +231,17 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_BLANK5" type="Button" parent="VBoxContainer/HBoxContainer3"]
+[node name="Button_BLANK5" type="Button" parent="VBoxContainer/HBoxContainer3" unique_id=1466673172]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer" unique_id=809941139]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button_16" type="Button" parent="VBoxContainer/HBoxContainer4" groups=["pause_menu_buttons"]]
+[node name="Button_16" type="Button" parent="VBoxContainer/HBoxContainer4" unique_id=1542601683 groups=["pause_menu_buttons"]]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -250,13 +250,13 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_BLANK6" type="Button" parent="VBoxContainer/HBoxContainer4"]
+[node name="Button_BLANK6" type="Button" parent="VBoxContainer/HBoxContainer4" unique_id=1536553700]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="Button_17" type="Button" parent="VBoxContainer/HBoxContainer4" groups=["pause_menu_buttons"]]
+[node name="Button_17" type="Button" parent="VBoxContainer/HBoxContainer4" unique_id=1622572151 groups=["pause_menu_buttons"]]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -265,13 +265,13 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_BLANK7" type="Button" parent="VBoxContainer/HBoxContainer4"]
+[node name="Button_BLANK7" type="Button" parent="VBoxContainer/HBoxContainer4" unique_id=1798436417]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="Button_18" type="Button" parent="VBoxContainer/HBoxContainer4" groups=["pause_menu_buttons"]]
+[node name="Button_18" type="Button" parent="VBoxContainer/HBoxContainer4" unique_id=1392963040 groups=["pause_menu_buttons"]]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -280,13 +280,13 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_BLANK8" type="Button" parent="VBoxContainer/HBoxContainer4"]
+[node name="Button_BLANK8" type="Button" parent="VBoxContainer/HBoxContainer4" unique_id=1652418136]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="Button_19" type="Button" parent="VBoxContainer/HBoxContainer4" groups=["pause_menu_buttons"]]
+[node name="Button_19" type="Button" parent="VBoxContainer/HBoxContainer4" unique_id=1362208046 groups=["pause_menu_buttons"]]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -295,13 +295,13 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_BLANK9" type="Button" parent="VBoxContainer/HBoxContainer4"]
+[node name="Button_BLANK9" type="Button" parent="VBoxContainer/HBoxContainer4" unique_id=527485953]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="Button_20" type="Button" parent="VBoxContainer/HBoxContainer4" groups=["pause_menu_buttons"]]
+[node name="Button_20" type="Button" parent="VBoxContainer/HBoxContainer4" unique_id=322909978 groups=["pause_menu_buttons"]]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -310,17 +310,17 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_BLANK10" type="Button" parent="VBoxContainer/HBoxContainer4"]
+[node name="Button_BLANK10" type="Button" parent="VBoxContainer/HBoxContainer4" unique_id=1586426573]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer" unique_id=2117364807]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button_21" type="Button" parent="VBoxContainer/HBoxContainer5" groups=["pause_menu_buttons"]]
+[node name="Button_21" type="Button" parent="VBoxContainer/HBoxContainer5" unique_id=1998605982 groups=["pause_menu_buttons"]]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -329,13 +329,13 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_BLANK11" type="Button" parent="VBoxContainer/HBoxContainer5"]
+[node name="Button_BLANK11" type="Button" parent="VBoxContainer/HBoxContainer5" unique_id=1286014074]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="Button_22" type="Button" parent="VBoxContainer/HBoxContainer5" groups=["pause_menu_buttons"]]
+[node name="Button_22" type="Button" parent="VBoxContainer/HBoxContainer5" unique_id=2111525668 groups=["pause_menu_buttons"]]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -344,13 +344,13 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_BLANK12" type="Button" parent="VBoxContainer/HBoxContainer5"]
+[node name="Button_BLANK12" type="Button" parent="VBoxContainer/HBoxContainer5" unique_id=1886331465]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="Button_23" type="Button" parent="VBoxContainer/HBoxContainer5" groups=["pause_menu_buttons"]]
+[node name="Button_23" type="Button" parent="VBoxContainer/HBoxContainer5" unique_id=437476907 groups=["pause_menu_buttons"]]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -359,13 +359,13 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_BLANK13" type="Button" parent="VBoxContainer/HBoxContainer5"]
+[node name="Button_BLANK13" type="Button" parent="VBoxContainer/HBoxContainer5" unique_id=55450851]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="Button_24" type="Button" parent="VBoxContainer/HBoxContainer5" groups=["pause_menu_buttons"]]
+[node name="Button_24" type="Button" parent="VBoxContainer/HBoxContainer5" unique_id=716659252 groups=["pause_menu_buttons"]]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -374,13 +374,13 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_BLANK14" type="Button" parent="VBoxContainer/HBoxContainer5"]
+[node name="Button_BLANK14" type="Button" parent="VBoxContainer/HBoxContainer5" unique_id=432404910]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="Button_25" type="Button" parent="VBoxContainer/HBoxContainer5" groups=["pause_menu_buttons"]]
+[node name="Button_25" type="Button" parent="VBoxContainer/HBoxContainer5" unique_id=916704557 groups=["pause_menu_buttons"]]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
@@ -389,34 +389,34 @@ icon = ExtResource("2_mqpij")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Button_BLANK15" type="Button" parent="VBoxContainer/HBoxContainer5"]
+[node name="Button_BLANK15" type="Button" parent="VBoxContainer/HBoxContainer5" unique_id=1241656474]
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=975582177]
 offset_left = 180.0
 offset_top = 218.0
 offset_right = 386.0
 offset_bottom = 452.84003
 
-[node name="Label" type="Label" parent="VBoxContainer2"]
+[node name="Label" type="Label" parent="VBoxContainer2" unique_id=468028593]
 modulate = Color(0.654902, 0.654902, 0.654902, 1)
 layout_mode = 2
 text = "Custom Levels"
 horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer2" unique_id=1158527979]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button_C1" type="Button" parent="VBoxContainer2/HBoxContainer" groups=["pause_menu_buttons"]]
+[node name="Button_C1" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=1969888735 groups=["pause_menu_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "C1"
 
-[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer/Button_C1" groups=["pause_menu_buttons"]]
+[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer/Button_C1" unique_id=334335102 groups=["pause_menu_buttons"]]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -427,19 +427,19 @@ grow_horizontal = 0
 icon = ExtResource("3_5jsve")
 flat = true
 
-[node name="Button_BLANK1" type="Button" parent="VBoxContainer2/HBoxContainer"]
+[node name="Button_BLANK1" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=947154008]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="Button_C2" type="Button" parent="VBoxContainer2/HBoxContainer" groups=["pause_menu_buttons"]]
+[node name="Button_C2" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=7108924 groups=["pause_menu_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "C2"
 
-[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer/Button_C2" groups=["pause_menu_buttons"]]
+[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer/Button_C2" unique_id=1801166552 groups=["pause_menu_buttons"]]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -450,19 +450,19 @@ grow_horizontal = 0
 icon = ExtResource("3_5jsve")
 flat = true
 
-[node name="Button_BLANK2" type="Button" parent="VBoxContainer2/HBoxContainer"]
+[node name="Button_BLANK2" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=156487977]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="Button_C3" type="Button" parent="VBoxContainer2/HBoxContainer" groups=["pause_menu_buttons"]]
+[node name="Button_C3" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=1390532594 groups=["pause_menu_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "C3"
 
-[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer/Button_C3" groups=["pause_menu_buttons"]]
+[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer/Button_C3" unique_id=426132774 groups=["pause_menu_buttons"]]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -473,23 +473,23 @@ grow_horizontal = 0
 icon = ExtResource("3_5jsve")
 flat = true
 
-[node name="Button_BLANK3" type="Button" parent="VBoxContainer2/HBoxContainer"]
+[node name="Button_BLANK3" type="Button" parent="VBoxContainer2/HBoxContainer" unique_id=2038804563]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer2"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer2" unique_id=795540124]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button_C4" type="Button" parent="VBoxContainer2/HBoxContainer2" groups=["pause_menu_buttons"]]
+[node name="Button_C4" type="Button" parent="VBoxContainer2/HBoxContainer2" unique_id=1496564325 groups=["pause_menu_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "C4"
 
-[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer2/Button_C4" groups=["pause_menu_buttons"]]
+[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer2/Button_C4" unique_id=1361716690 groups=["pause_menu_buttons"]]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -500,19 +500,19 @@ grow_horizontal = 0
 icon = ExtResource("3_5jsve")
 flat = true
 
-[node name="Button_BLANK4" type="Button" parent="VBoxContainer2/HBoxContainer2"]
+[node name="Button_BLANK4" type="Button" parent="VBoxContainer2/HBoxContainer2" unique_id=1086256401]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="Button_C5" type="Button" parent="VBoxContainer2/HBoxContainer2" groups=["pause_menu_buttons"]]
+[node name="Button_C5" type="Button" parent="VBoxContainer2/HBoxContainer2" unique_id=181513583 groups=["pause_menu_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "C5"
 
-[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer2/Button_C5" groups=["pause_menu_buttons"]]
+[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer2/Button_C5" unique_id=1205876026 groups=["pause_menu_buttons"]]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -523,19 +523,19 @@ grow_horizontal = 0
 icon = ExtResource("3_5jsve")
 flat = true
 
-[node name="Button_BLANK5" type="Button" parent="VBoxContainer2/HBoxContainer2"]
+[node name="Button_BLANK5" type="Button" parent="VBoxContainer2/HBoxContainer2" unique_id=1579482628]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="Button_C6" type="Button" parent="VBoxContainer2/HBoxContainer2" groups=["pause_menu_buttons"]]
+[node name="Button_C6" type="Button" parent="VBoxContainer2/HBoxContainer2" unique_id=1171557438 groups=["pause_menu_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "C6"
 
-[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer2/Button_C6" groups=["pause_menu_buttons"]]
+[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer2/Button_C6" unique_id=381906630 groups=["pause_menu_buttons"]]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -546,23 +546,23 @@ grow_horizontal = 0
 icon = ExtResource("3_5jsve")
 flat = true
 
-[node name="Button_BLANK6" type="Button" parent="VBoxContainer2/HBoxContainer2"]
+[node name="Button_BLANK6" type="Button" parent="VBoxContainer2/HBoxContainer2" unique_id=1447716487]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer2"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer2" unique_id=656088436]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button_C7" type="Button" parent="VBoxContainer2/HBoxContainer3" groups=["pause_menu_buttons"]]
+[node name="Button_C7" type="Button" parent="VBoxContainer2/HBoxContainer3" unique_id=118724758 groups=["pause_menu_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "C7"
 
-[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer3/Button_C7" groups=["pause_menu_buttons"]]
+[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer3/Button_C7" unique_id=143814510 groups=["pause_menu_buttons"]]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -573,19 +573,19 @@ grow_horizontal = 0
 icon = ExtResource("3_5jsve")
 flat = true
 
-[node name="Button_BLANK7" type="Button" parent="VBoxContainer2/HBoxContainer3"]
+[node name="Button_BLANK7" type="Button" parent="VBoxContainer2/HBoxContainer3" unique_id=2034505699]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="Button_C8" type="Button" parent="VBoxContainer2/HBoxContainer3" groups=["pause_menu_buttons"]]
+[node name="Button_C8" type="Button" parent="VBoxContainer2/HBoxContainer3" unique_id=671551306 groups=["pause_menu_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "C8"
 
-[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer3/Button_C8" groups=["pause_menu_buttons"]]
+[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer3/Button_C8" unique_id=1738384274 groups=["pause_menu_buttons"]]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -596,19 +596,19 @@ grow_horizontal = 0
 icon = ExtResource("3_5jsve")
 flat = true
 
-[node name="Button_BLANK8" type="Button" parent="VBoxContainer2/HBoxContainer3"]
+[node name="Button_BLANK8" type="Button" parent="VBoxContainer2/HBoxContainer3" unique_id=343999557]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="Button_C9" type="Button" parent="VBoxContainer2/HBoxContainer3" groups=["pause_menu_buttons"]]
+[node name="Button_C9" type="Button" parent="VBoxContainer2/HBoxContainer3" unique_id=244947013 groups=["pause_menu_buttons"]]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "C9"
 
-[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer3/Button_C9" groups=["pause_menu_buttons"]]
+[node name="Trash" type="Button" parent="VBoxContainer2/HBoxContainer3/Button_C9" unique_id=48033654 groups=["pause_menu_buttons"]]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -619,14 +619,14 @@ grow_horizontal = 0
 icon = ExtResource("3_5jsve")
 flat = true
 
-[node name="Button_BLANK9" type="Button" parent="VBoxContainer2/HBoxContainer3"]
+[node name="Button_BLANK9" type="Button" parent="VBoxContainer2/HBoxContainer3" unique_id=1071986042]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 disabled = true
 flat = true
 
-[node name="ButtonReset" type="Button" parent="." groups=["pause_menu_buttons"]]
+[node name="ButtonReset" type="Button" parent="." unique_id=941493515 groups=["pause_menu_buttons"]]
 modulate = Color(1, 0, 0, 1)
 offset_left = 904.0
 offset_top = 608.0
@@ -634,7 +634,7 @@ offset_right = 1138.0
 offset_bottom = 639.0
 text = "Reset Level"
 
-[node name="TrashPopup" type="PanelContainer" parent="."]
+[node name="TrashPopup" type="PanelContainer" parent="." unique_id=1679478052]
 visible = false
 z_index = 5
 anchors_preset = 8
@@ -649,33 +649,33 @@ offset_bottom = -116.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="TrashPopup"]
+[node name="MarginContainer" type="MarginContainer" parent="TrashPopup" unique_id=628726161]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TrashPopup/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TrashPopup/MarginContainer" unique_id=1119909186]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="Label" type="Label" parent="TrashPopup/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="TrashPopup/MarginContainer/VBoxContainer" unique_id=1590525412]
 layout_mode = 2
 text = "Are you sure you want
 to delete this level?"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ButtonYes" type="Button" parent="TrashPopup/MarginContainer/VBoxContainer"]
+[node name="ButtonYes" type="Button" parent="TrashPopup/MarginContainer/VBoxContainer" unique_id=1288673428]
 layout_mode = 2
 text = "Yes"
 
-[node name="ButtonNo" type="Button" parent="TrashPopup/MarginContainer/VBoxContainer"]
+[node name="ButtonNo" type="Button" parent="TrashPopup/MarginContainer/VBoxContainer" unique_id=684385415]
 layout_mode = 2
 text = "No"
 
-[node name="CannotDeletePopup" type="PanelContainer" parent="."]
+[node name="CannotDeletePopup" type="PanelContainer" parent="." unique_id=1492776453]
 visible = false
 z_index = 5
 anchors_preset = 8
@@ -690,28 +690,28 @@ offset_bottom = -114.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="CannotDeletePopup"]
+[node name="MarginContainer" type="MarginContainer" parent="CannotDeletePopup" unique_id=1411969819]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CannotDeletePopup/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CannotDeletePopup/MarginContainer" unique_id=70199120]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="CannotDeletePopup/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="CannotDeletePopup/MarginContainer/VBoxContainer" unique_id=2025703561]
 layout_mode = 2
 text = "Cannot delete currently loaded level."
 vertical_alignment = 1
 
-[node name="ButtonOK" type="Button" parent="CannotDeletePopup/MarginContainer/VBoxContainer"]
+[node name="ButtonOK" type="Button" parent="CannotDeletePopup/MarginContainer/VBoxContainer" unique_id=1166152352]
 layout_mode = 2
 text = "OK"
 
-[node name="Control1" type="Control" parent="."]
+[node name="Control1" type="Control" parent="." unique_id=124551530]
 layout_mode = 3
 anchors_preset = 11
 anchor_left = 1.0
@@ -722,7 +722,7 @@ grow_horizontal = 0
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Control2" type="Control" parent="."]
+[node name="Control2" type="Control" parent="." unique_id=438305510]
 layout_mode = 3
 anchors_preset = 12
 anchor_top = 1.0
